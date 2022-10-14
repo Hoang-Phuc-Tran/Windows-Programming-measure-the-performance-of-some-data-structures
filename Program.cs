@@ -62,10 +62,7 @@ namespace A03_DataStructures
                     hashTable.Add(guid, combine);
                 }
 
-                Random random = new Random();
-
-                string[] validTest = new string[VALID_MAX];
-                string[] invalidTest = new string[INVALID_MAX];
+                
 
 
 
