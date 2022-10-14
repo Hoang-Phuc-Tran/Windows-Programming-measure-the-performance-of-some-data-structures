@@ -80,8 +80,28 @@ namespace A03_DataStructures
                     validTest[i] = (string)array[index];
                 }
 
-                
+                Stopwatch stopwatch = new Stopwatch();
 
+                // Create a random index to search
+                int idx = random.Next(array.Count);
+
+                // UNSORTED array
+                stopwatch.Start();
+                // search valid elements
+                for (int i = 0; i < VALID_MAX; i++)
+                {
+                    array.IndexOf(validTest[i]);
+                }
+                // search invalid elements
+                for(int i =0; i < INVALID_MAX; i++)
+                {
+                    array.IndexOf(invalidTest[i]);
+                }
+                stopwatch.Stop();
+                Console.WriteLine("Searching {0,5} VALID items and {1,5} INVALID items in an UNSORTED ArrayList containing {2, 7} elements ", VALID_MAX, INVALID_MAX, array.Count);
+                Console.WriteLine("The time-consuming search: " + stopwatch.Elapsed + "\n");
+
+                
 
             }
         }
