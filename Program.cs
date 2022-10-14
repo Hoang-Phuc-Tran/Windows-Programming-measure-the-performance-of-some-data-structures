@@ -62,9 +62,25 @@ namespace A03_DataStructures
                     hashTable.Add(guid, combine);
                 }
 
+                Random random = new Random();
+
+                string[] validTest = new string[VALID_MAX];
+                string[] invalidTest = new string[INVALID_MAX];
+
+                // Create an invalid dataset
+                for(int i = 0; i < INVALID_MAX; i++)
+                {
+                    invalidTest[i] = Guid.NewGuid().ToString();
+                }
+
+                // Create an valid dataset
+                for(int i = 0; i < VALID_MAX; i++)
+                {
+                    int index = random.Next(array.Count);
+                    validTest[i] = (string)array[index];
+                }
+
                 
-
-
 
 
             }
